@@ -9,7 +9,7 @@ import (
 	"os"
 )
 
-func check(e error)  {
+func check(e error) {
 	if e != nil {
 		fmt.Println("File does not exist!!")
 	}
@@ -19,6 +19,7 @@ func main() {
 
 	if len(os.Args) < 2 {
 		fmt.Println("File path is not specified in argument.")
+		fmt.Println("\nExample:\n\thashgen ~/Downloads/ExampleFile.iso\n\thashgen passwords.txt")
 		return
 	}
 
