@@ -16,3 +16,13 @@ Available Hashes:
 $ curl https://github.com/shaswata56/Hashgen/releases/download/v1.1/hashgen
 $ sudo mv hashgen /bin
 ```
+
+# Usage:
+
+```Bash
+$ hashgen /path/to/file [hashtype]
+```
+  Available hashtypes: 
+    sha1
+    sha256
+    sha512
