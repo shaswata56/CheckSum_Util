@@ -1,9 +1,9 @@
 package main
 
 import (
-	"crypto/md5"
 	"crypto/sha1"
 	"crypto/sha256"
+	"crypto/sha512"
 	"fmt"
 	"io"
 	"os"
@@ -15,33 +15,58 @@ func check(e error) {
 	}
 }
 
+func sha_1(filename string) {
+	file, err := os.Open(filename)
+	check(err)
+	sha := sha1.New()
+	_, _ = io.Copy(sha, file)
+	fmt.Printf("sha1:\t%x\n", sha.Sum(nil))
+	_ = file.Close()
+}
+
+func sha2(filename string) {
+	file, err := os.Open(filename)
+	check(err)
+	sha := sha256.New()
+	_, _ = io.Copy(sha, file)
+	fmt.Printf("sha256:\t%x\n", sha.Sum(nil))
+	_ = file.Close()
+}
+
+func sha5(filename string) {
+	file, err := os.Open(filename)
+	check(err)
+	sha := sha512.New()
+	_, _ = io.Copy(sha, file)
+	fmt.Printf("sha512:\t%x\n", sha.Sum(nil))
+	_ = file.Close()
+}
+
 func main() {
 
 	fmt.Println("HashGen v1.0\n")
 
 	if len(os.Args) < 2 {
 		fmt.Println("Error: File path is not specified in argument.")
-		fmt.Println("\nExample:\n\thashgen ~/Downloads/ExampleFile.iso\n\thashgen passwords.txt")
+		fmt.Println("\nExample:\n\thashgen ~/Downloads/ExampleFile.iso sha1\n\thashgen passwords.txt sha512")
+		return
+	}
+	if len(os.Args) < 3 {
+		fmt.Println("Error: Hash type is not specified in argument.")
+		fmt.Println("\nExample:\n\thashgen ~/Downloads/ExampleFile.iso sha1\n\thashgen passwords.txt sha512")
 		return
 	}
 
 	fileName := os.Args[1]
+	typ := os.Args[2]
 
-	file, err := os.Open(fileName)
-	check(err)
-
-	defer file.Close()
-
-	md := md5.New()
-	sha := sha1.New()
-	sha2 := sha256.New()
-
-	go io.Copy(md, file)
-	go io.Copy(sha, file)
-	go io.Copy(sha2, file)
-
-	fmt.Println("Verify these Hashes with checksum.")
-	fmt.Printf("md5:\t%x\n", md.Sum(nil))
-	fmt.Printf("sha1:\t%x\n", sha.Sum(nil))
-	fmt.Printf("sha256:\t%x\n", sha2.Sum(nil))
+	if typ == "sha1" {
+		sha_1(fileName)
+	}
+	if typ == "sha256" {
+		sha2(fileName)
+	}
+	if typ == "sha512" {
+		sha5(fileName)
+	}
 }
