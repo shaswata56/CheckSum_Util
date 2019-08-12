@@ -44,7 +44,7 @@ func sha5(filename string) {
 
 func main() {
 
-	fmt.Println("HashGen v1.0\n")
+	fmt.Println("HashGen v1.1\n")
 
 	if len(os.Args) < 2 {
 		fmt.Println("Error: File path is not specified in argument.")
