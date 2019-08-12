@@ -12,9 +12,10 @@ Available Hashes:
 
 # Installation:
 **For Linux:**
+Download [it](https://github.com/shaswata56/Hashgen/releases/download/1.1/hashgen).
 ```csh
-$ curl https://github.com/shaswata56/Hashgen/releases/download/v1.1/hashgen
-$ sudo mv hashgen /bin
+$ chmod +x hashgen
+$ sudo mv hashgen /usr/bin/hashgen
 ```
 
 **For Windows:**
