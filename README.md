@@ -1,5 +1,5 @@
 # Hashgen
-A simple and fast File Hashing utility.
+A cross-platform, simple and fast File Hashing utility.
 
 Available Hashes:
 
