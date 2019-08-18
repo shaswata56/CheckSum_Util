@@ -1,5 +1,5 @@
-# Hashgen
-A cross-platform, simple and fast File Hashing utility.
+# CheckSum_Util
+A unix like CLI checksum utility ported for WindowsNT.
 
 Available Hashes:
 
@@ -14,9 +14,7 @@ Available Hashes:
 
 # Installation:
 
-**For Windows:**
-
-Download latest Windows zip release from [here](https://github.com/shaswata56/Hashgen/releases/download/1.1/hashgen.zip).
+Download latest Windows zip release from [here](https://github.com/shaswata56/Hashgen/releases/download/1.1/checksum_util.zip).
 
 Extract the zip file. Then right-click 'install.bat' and Run as Administrator.
 
