@@ -14,7 +14,7 @@ Available Hashes:
 
 # Installation:
 
-Download latest Windows zip release from [here](https://github.com/shaswata56/Hashgen/releases/download/1.1/checksum_util.zip).
+Download latest Windows zip release from [here](https://github.com/shaswata56/Hashgen/releases/download/2.0/checksum_util.zip).
 
 Extract the zip file. Then right-click 'install.bat' and Run as Administrator.
 
