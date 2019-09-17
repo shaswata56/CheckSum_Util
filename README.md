@@ -1,5 +1,5 @@
-# CheckSum_Util
-A unix like CLI checksum utility ported for WindowsNT.
+# CheckSum_Util       [![Download Checksum Util](https://img.shields.io/sourceforge/dt/checksum-util.svg)](https://sourceforge.net/projects/checksum-util/files/latest/download)
+A unix like CLI checksum utility ported for WindowsNT.       [![Download Checksum Util](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/checksum-util/files/latest/download)
 
 Available Hashes:
 
